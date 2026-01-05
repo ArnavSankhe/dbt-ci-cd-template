@@ -2,7 +2,7 @@
 
 Minimal dbt Core + Snowflake repo with GitHub Actions for CI (PR checks) and CD (deploy on main). The dbt models follow a basic medallion layout: bronze -> silver -> gold.
 
-## What’s included
+## What's included
 - dbt Core project scaffold with sample seed + models
 - GitHub Actions workflows for CI and deploy
 - Snowflake setup SQL (warehouse, DB, schemas, role)
@@ -40,6 +40,7 @@ Add these repository secrets (Settings -> Secrets and variables -> Actions):
 ## CI/CD
 - CI runs on pull requests to main
 - Deploy runs on merge to main (or manual dispatch)
+- PRs should pass dbt seed/run/test before merge
 
 ## Notes
 - Azure setup is intentionally skipped for this MVP. If you want Azure resources or Key Vault later, we can layer that in.
