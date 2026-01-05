@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: orders_bronze
+    description: 'Raw orders seed promoted into bronze.'
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+
+  - name: orders_silver
+    description: 'Cleaned orders with basic normalization.'
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+
+  - name: orders_gold
+    description: 'Customer-level order metrics.'
+    columns:
+      - name: customer_id
+        tests:
+          - not_null

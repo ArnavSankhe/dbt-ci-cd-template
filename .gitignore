@@ -1,0 +1,9 @@
+# dbt
+profiles.yml
+target/
+dbt_packages/
+logs/
+
+# local
+.env
+.DS_Store
